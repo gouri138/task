@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML QUIZ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      </style>
+    <link rel="stylesheet" href="quiz.css"> 
+</head>
+<body>
+    <div class="quiz-window">
+        <fieldset>
+            <legend style="font-size: 50px;">HTML Quizz!!</legend>
+            <marquee direction="right">
+                <div class="marq">
+                    Best of Luck for the quiz!! Give your best..
+                </div>
+            </marquee>
+        </fieldset>
+    </div>
+    <h1>Let's start the quiz!</h1>
+
+    <div class="questions">
+        <fieldset>
+            <legend>Question 1</legend>
+            <h3 style="margin-left: 10px;"> What do you understand by HTML?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt4">
+            <label for="opt1"> Hypertext Meta language</label><br>
+            <input type="radio" id="opt2" name="opt4">
+            <label for="opt2"> Hypertext Machine language</label><br>
+            <input type="radio" id="opt3" name="opt4">
+            <label for="opt3"> Hypertext markup language</label><br>
+            <input type="radio" id="opt4" name="opt4">
+            <label for="opt4"> Hypertroll makeup language</label><br><br>
+            </div>
+            <legend>Question 2</legend>
+            <h3 style="margin-left: 10px;">Who is the father of HTML?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt3">
+            <label for="opt1"> Rasmus lerdof</label><br>
+            <input type="radio" id="opt2" name="opt3">
+            <label for="opt2">Tim Berners lee</label><br>
+            <input type="radio" id="opt3" name="opt3">
+            <label for="opt3"> Brendan Eich</label><br>
+            <input type="radio" id="opt4" name="opt3">
+            <label for="opt4"> Sergey Brin</label><br><br>
+            </div>
+            <legend>Question 3</legend>
+            <h3 style="margin-left: 10px;"> What is the correct syntax of doctype in HTML5?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt2">
+            <label for="opt1">/doctype html </label><br>
+            <input type="radio" id="opt2" name="opt2">
+            <label for="opt2">doctype html</doctype></label><br>
+            <input type="radio" id="opt3" name="opt2">
+            <label for="opt3"> doctype html!</doctype></label><br>
+            <input type="radio" id="opt4" name="opt2">
+            <label for="opt4"> !doctype html </label><br><br>
+            </div>
+            <legend>Question 4</legend>
+            <h3 style="margin-left: 10px;">  Which of the following is used to read an HTML page and render it?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt1">
+            <label for="opt1">web server </label><br>
+            <input type="radio" id="opt2" name="opt1">
+            <label for="opt2">web network</doctype></label><br>
+            <input type="radio" id="opt3" name="opt1">
+            <label for="opt3"> web browser</doctype></label><br>
+            <input type="radio" id="opt4" name="opt1">
+            <label for="opt4"> web matrix</label><br><br>
+            </div>
+            </fieldset>
+    </div>
+<div class="box">
+	<a class="button" href="quizz2.html" onclick="return validateForm()">Next</a>
+</div>
+<script>
+    function validateForm() {
+        // Question 1 validation
+        var q1Options = document.getElementsByName('opt4');
+        var q1Answer = false;
+        for (var i = 0; i < q1Options.length; i++) {
+            if (q1Options[i].checked) {
+                q1Answer = true;
+                break;
+            }
+        }
+        if (!q1Answer) {
+            alert("Please select an answer for Question 1");
+            return false;
+        }
+
+        // Question 2 validation
+        var q2Options = document.getElementsByName('opt3');
+        var q2Answer = false;
+        for (var j = 0; j < q2Options.length; j++) {
+            if (q2Options[j].checked) {
+                q2Answer = true;
+                break;
+            }
+        }
+        if (!q2Answer) {
+            alert("Please select an answer for Question 2");
+            return false;
+        }
+
+        // Question 3 validation
+        var q3Options = document.getElementsByName('opt2');
+        var q3Answer = false;
+        for (var k = 0; k < q3Options.length; k++) {
+            if (q3Options[k].checked) {
+                q3Answer = true;
+                break;
+            }
+        }
+        if (!q3Answer) {
+            alert("Please select an answer for Question 3");
+            return false;
+        }
+
+        // Question 4 validation
+        var q4Options = document.getElementsByName('opt1');
+        var q4Answer = false;
+        for (var l = 0; l < q4Options.length; l++) {
+            if (q4Options[l].checked) {
+                q4Answer = true;
+                break;
+            }
+        }
+        if (!q4Answer) {
+            alert("Please select an answer for Question 4");
+            return false;
+        }
+
+               return true; // All questions have been answered
+    }
+</script>
+</body>
+</html>

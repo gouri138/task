@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML QUIZ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      </style>
+    <link rel="stylesheet" href="quiz2.css"> 
+</head>
+<body>
+    <div class="quiz-window">
+        <fieldset>
+            <legend style="font-size: 50px;">CSS QUIZ!!</legend>
+            <marquee direction="right">
+                <div class="marq">
+                    Best of Luck for the quiz!! Give your best..
+                </div>
+            </marquee>
+        </fieldset>
+    </div>
+    
+    <div class="questions">
+        <fieldset>
+            <legend>Question 1</legend>
+            <h3 style="margin-left: 10px;"> What does CSS stand for?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt4">
+            <label for="opt1"> creative style sheets</label><br>
+            <input type="radio" id="opt2" name="opt4">
+            <label for="opt2"> colourful style sheets</label><br>
+            <input type="radio" id="opt3" name="opt4">
+            <label for="opt3"> Cascading style sheets</label><br>
+            <input type="radio" id="opt4" name="opt4">
+            <label for="opt4"> Computer style sheets</label><br><br>
+            </div>
+            <legend>Question 2</legend>
+            <h3 style="margin-left: 10px;">Which of the following tag is used to embed css in html page?
+            </h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt3">
+            <label for="opt1">css</label><br>
+            <input type="radio" id="opt2" name="opt3">
+            <label for="opt2">script</label><br>
+            <input type="radio" id="opt3" name="opt3">
+            <label for="opt3">!DOCTYPE html</label><br>
+            <input type="radio" id="opt4" name="opt3">
+            <label for="opt4">style</label><br><br>
+            </div>
+            <legend>Question 3</legend>
+            <h3 style="margin-left: 10px;"> Which of the following CSS selectors are used to specify a group of elements?</h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt2">
+            <label for="opt1">tag</label><br>
+            <input type="radio" id="opt2" name="opt2">
+            <label for="opt2">id</doctype></label><br>
+            <input type="radio" id="opt3" name="opt2">
+            <label for="opt3">class</doctype></label><br>
+            <input type="radio" id="opt4" name="opt2">
+            <label for="opt4">Both class and tag </label><br><br>
+            </div>
+            <legend>Question 4</legend>
+            <h3 style="margin-left: 10px;">Which of the following CSS style property is used to specify an italic text?  </h3>
+            <br>
+            <div class="options">
+            <input type="radio" id="opt1" name="opt1">
+            <label for="opt1">font </label><br>
+            <input type="radio" id="opt2" name="opt1">
+            <label for="opt2">font style</doctype></label><br>
+            <input type="radio" id="opt3" name="opt1">
+            <label for="opt3">style</doctype></label><br>
+            <input type="radio" id="opt4" name="opt1">
+            <label for="opt4">@font_face</label><br><br>
+            </div>
+          
+        </fieldset>
+    </div>
+<div class="box">
+	<a class="button" href="quizz3.html" onclick="return validateForm()">Next</a>
+</div>	
+<script>
+    function validateForm() {
+        // Question 1 validation
+        var q1Options = document.getElementsByName('opt4');
+        var q1Answer = false;
+        for (var i = 0; i < q1Options.length; i++) {
+            if (q1Options[i].checked) {
+                q1Answer = true;
+                break;
+            }
+        }
+        if (!q1Answer) {
+            alert("Please select an answer for Question 1");
+            return false;
+        }
+
+        // Question 2 validation
+        var q2Options = document.getElementsByName('opt3');
+        var q2Answer = false;
+        for (var j = 0; j < q2Options.length; j++) {
+            if (q2Options[j].checked) {
+                q2Answer = true;
+                break;
+            }
+        }
+        if (!q2Answer) {
+            alert("Please select an answer for Question 2");
+            return false;
+        }
+
+        // Question 3 validation
+        var q3Options = document.getElementsByName('opt2');
+        var q3Answer = false;
+        for (var k = 0; k < q3Options.length; k++) {
+            if (q3Options[k].checked) {
+                q3Answer = true;
+                break;
+            }
+        }
+        if (!q3Answer) {
+            alert("Please select an answer for Question 3");
+            return false;
+        }
+
+        // Question 4 validation
+        var q4Options = document.getElementsByName('opt1');
+        var q4Answer = false;
+        for (var l = 0; l < q4Options.length; l++) {
+            if (q4Options[l].checked) {
+                q4Answer = true;
+                break;
+            }
+        }
+        if (!q4Answer) {
+            alert("Please select an answer for Question 4");
+            return false;
+        }
+
+               return true; // All questions have been answered
+    }
+</script>
+</body>
+</html>
